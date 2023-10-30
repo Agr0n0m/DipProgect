@@ -5,7 +5,7 @@
 -- Dumped from database version 15.2
 -- Dumped by pg_dump version 15.2
 
--- Started on 2023-10-22 19:20:34
+-- Started on 2023-10-30 14:31:34
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -355,6 +355,11 @@ INSERT INTO public.image (id, file_name, product_id) VALUES (22, 'b581a882-d346-
 INSERT INTO public.image (id, file_name, product_id) VALUES (23, '73927032-524a-442b-89d8-d01d6fcf42b0.baget-s-chesnochnoj-nachinkoj-1.jpg', 5);
 INSERT INTO public.image (id, file_name, product_id) VALUES (24, '6c4707e0-ac9c-416f-bf3a-be1de94a44e8.baget-s-chesnochnoj-nachinkoj-2.jpg', 5);
 INSERT INTO public.image (id, file_name, product_id) VALUES (25, '0043c44a-fdad-479c-998e-98d1087af655.baget-s-chesnochnoj-nachinkoj-0.jpg', 5);
+INSERT INTO public.image (id, file_name, product_id) VALUES (26, '4982631b-05db-4966-bd30-c9a30a4e03a5.hleb-minskij-temnyj-01.jpg', 6);
+INSERT INTO public.image (id, file_name, product_id) VALUES (27, 'f0466f9d-06ca-4d0a-b747-249b7d961dd0.hleb-minskij-temnyj-12.jpg', 6);
+INSERT INTO public.image (id, file_name, product_id) VALUES (28, 'bb4359fa-5169-4fa3-915a-f9927db0b497.hleb-minskij-temnyj-21.jpg', 6);
+INSERT INTO public.image (id, file_name, product_id) VALUES (29, '2bc9886a-6621-4cc4-b5f7-937e57e14e20.hleb-minskij-temnyj-01.jpg', 6);
+INSERT INTO public.image (id, file_name, product_id) VALUES (30, 'b50a020e-0c4e-4113-8120-d61ccccc5286.hleb-minskij-temnyj-21.jpg', 6);
 
 
 --
@@ -364,7 +369,9 @@ INSERT INTO public.image (id, file_name, product_id) VALUES (25, '0043c44a-fdad-
 --
 
 INSERT INTO public.orders (id, count, date_time, number, price, status, person_id, product_id) VALUES (1, 1, '2023-10-20 11:38:31.103913', '345d3a3c-b00c-47f8-a7ef-657c736876ff', 150, 1, 2, 4);
-INSERT INTO public.orders (id, count, date_time, number, price, status, person_id, product_id) VALUES (2, 1, '2023-10-20 11:38:31.14381', '345d3a3c-b00c-47f8-a7ef-657c736876ff', 1250, 1, 2, 1);
+INSERT INTO public.orders (id, count, date_time, number, price, status, person_id, product_id) VALUES (3, 1, '2023-10-29 17:50:33.646338', '5e43369f-1855-4737-8086-35022d2c5201', 990, 1, 2, 2);
+INSERT INTO public.orders (id, count, date_time, number, price, status, person_id, product_id) VALUES (4, 1, '2023-10-30 08:36:18.585874', 'bedcca70-cc33-4432-ab39-08e29d28fc51', 1540, 2, 3, 3);
+INSERT INTO public.orders (id, count, date_time, number, price, status, person_id, product_id) VALUES (2, 1, '2023-10-20 11:38:31.14381', '345d3a3c-b00c-47f8-a7ef-657c736876ff', 1250, 3, 2, 1);
 
 
 --
@@ -374,7 +381,8 @@ INSERT INTO public.orders (id, count, date_time, number, price, status, person_i
 --
 
 INSERT INTO public.person (id, login, password, role) VALUES (1, 'admin', '$2a$10$Y3Skgro10aRyw0myDr2t1OabpvPmXb4twCWGRjqOrRn.j0AaYxA7q', 'ROLE_ADMIN');
-INSERT INTO public.person (id, login, password, role) VALUES (2, 'user1', '$2a$10$S4bcP0RKnTwZA4TyESbJoukRbX/NSkA8SZyifY/4Rd2iScyxL57/a', 'ROLE_USER');
+INSERT INTO public.person (id, login, password, role) VALUES (3, 'user2', '$2a$10$dKkwSIrIE6OvYWecLbEFBes0pU8GMzoWUXhSxrolrcV3KyfhM11yG', 'ROLE_USER');
+INSERT INTO public.person (id, login, password, role) VALUES (2, 'user1', '$2a$10$S4bcP0RKnTwZA4TyESbJoukRbX/NSkA8SZyifY/4Rd2iScyxL57/a', 'ROLE_ADMIN');
 
 
 --
@@ -384,10 +392,11 @@ INSERT INTO public.person (id, login, password, role) VALUES (2, 'user1', '$2a$1
 --
 
 INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (1, '2023-10-19 15:21:37.360883', 'Пирог с брусничной начинкой и начинкой из белого шоколада, брусникой, взбитыми сливками, украшенный белом шоколадом и клюквой.', 1250, 'Торт брусничный с белым шоколадом', 3);
-INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (2, '2023-10-19 15:24:27.830087', 'Песочный корж, конфитюр из марокканских мандаринов с цедрой, нежный заварной крем с бурбонской ванилью и воздушная меренга.', 990, 'Торт мандариновый с меренгой', 3);
 INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (3, '2023-10-19 15:41:39.398378', 'Брюссельский вишневый пирог с начинкой из свежих вишен.', 1540, 'Вишневый пирог', 2);
-INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (4, '2023-10-19 19:40:54.829212', 'Классический пористый хлеб из пшеничной муки высшего сорта', 150, 'Хлеб Чиабатта', 1);
 INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (5, '2023-10-19 19:42:08.291833', 'Французский багет с начинкой из чесночного масла.', 99, 'Багет с чесночной начинкой', 1);
+INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (6, '2023-10-29 17:28:05.981104', 'Хлеб "Минский" выпекается из пшеничной муки 1 сорта и ржаной обдирной с добавлением солода, картофельных хлопьев и тмина.', 63, 'Хлеб "Минский" тёмный', 1);
+INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (2, NULL, 'Песочный корж, конфитюр из марокканских мандаринов с цедрой, нежный заварной крем с бурбонской ванилью и воздушная меренга.', 999, 'Торт мандариновый с меренгой', 3);
+INSERT INTO public.product (id, date_time, description, price, title, category_id) VALUES (4, NULL, 'Классический пористый хлеб из пшеничной муки высшего сорта', 151, 'Хлеб Чиабатта', 1);
 
 
 --
@@ -413,7 +422,7 @@ SELECT pg_catalog.setval('public.category_id_seq', 1, false);
 -- Name: image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.image_id_seq', 25, true);
+SELECT pg_catalog.setval('public.image_id_seq', 40, true);
 
 
 --
@@ -422,7 +431,7 @@ SELECT pg_catalog.setval('public.image_id_seq', 25, true);
 -- Name: orders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.orders_id_seq', 2, true);
+SELECT pg_catalog.setval('public.orders_id_seq', 4, true);
 
 
 --
@@ -431,7 +440,7 @@ SELECT pg_catalog.setval('public.orders_id_seq', 2, true);
 -- Name: person_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.person_id_seq', 2, true);
+SELECT pg_catalog.setval('public.person_id_seq', 3, true);
 
 
 --
@@ -440,7 +449,7 @@ SELECT pg_catalog.setval('public.person_id_seq', 2, true);
 -- Name: product_cart_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.product_cart_id_seq', 4, true);
+SELECT pg_catalog.setval('public.product_cart_id_seq', 8, true);
 
 
 --
@@ -449,7 +458,7 @@ SELECT pg_catalog.setval('public.product_cart_id_seq', 4, true);
 -- Name: product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.product_id_seq', 5, true);
+SELECT pg_catalog.setval('public.product_id_seq', 8, true);
 
 
 --
@@ -569,7 +578,7 @@ ALTER TABLE ONLY public.product_cart
     ADD CONSTRAINT fksgnkc1ko2i1o9yr2p63ysq3rn FOREIGN KEY (person_id) REFERENCES public.person(id);
 
 
--- Completed on 2023-10-22 19:20:34
+-- Completed on 2023-10-30 14:31:34
 
 --
 -- PostgreSQL database dump complete
